@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.5" client="site" method="upgrade">
+	<name>Меню К2</name>
+	<creationDate>21.11.2017</creationDate>
+	<author>AkinaySau</author>
+	<authorEmail>akinaysau@gmail.com</authorEmail>
+	<authorUrl>http://a-sau.com</authorUrl>
+	<version>1.0</version>
+	<description>Меню из категорий К2</description>
+
+	<files>
+		<filename module="mod_sau_k2cm">mod_sau_k2cm.php</filename>
+		<filename>mod_sau_k2cm.xml</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<config addfieldpath="/administrator/components/com_k2/elements/">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="type"
+					   type="radio"
+					   default="1"
+					   label="Множество категорий"
+					   class="btn-group btn-group-yesno">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<fieldset>
+					<field showon="type:0"
+						   name="s1_category_id"
+						   type="categories"
+						   label="Категория"/>
+					<field showon="type:0"
+						   name="s1_children_level"
+						   type="list"
+						   default="0"
+						   label="Уровень подкатегорий">
+						<option value="-1">JNO</option>
+						<option value="0">JALL</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+					</field>
+				</fieldset>
+				<fieldset>
+					<field showon="type:1"
+						   name="s2_categories"
+						   type="categoriesmultiple"
+						   default="" label="K2_SELECT_ONE_OR_MORE_CATEGORIES"
+						   description="K2_SELECT_ONE_ORE_MORE_CATEGORIES_FOR_WHICH_YOU_WANT_TO_FILTER_AN_ITEMS_LIST_SELECT_NONE_TO_FETCH_ITEMS_FROM_ALL_CATEGORIES"/>
+				</fieldset>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+						name="layout"
+						type="modulelayout"
+						label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
