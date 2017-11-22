@@ -2,10 +2,10 @@
 /**
  * @package    sau_k2cm
  *
- * @author     AkinaySau <your@email.com>
- * @copyright  A copyright
+ * @author     AkinaySau <akinaysau@gmail.com>
+ * @copyright  AkinaySau
  * @license    GNU General Public License version 2 or later; see LICENSE.txt
- * @link       http://your.url.com
+ * @link       http://a-sau.ru
  */
 
 defined( '_JEXEC' ) or die;
